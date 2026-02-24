@@ -9,7 +9,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Override
     public User register(User user) {
-        if (user == null){
+        if (user == null) {
             throw new RegistrationException("User cant be null");
         }
         if (storageDao.get(user.getLogin()) != null) {

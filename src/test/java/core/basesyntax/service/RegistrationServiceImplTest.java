@@ -1,14 +1,13 @@
 package core.basesyntax.service;
 
 import core.basesyntax.model.User;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class RegistrationServiceImplTest {
-    RegistrationService registrationService = new RegistrationServiceImpl();
-    static User user;
+    private RegistrationService registrationService = new RegistrationServiceImpl();
+    private static User user;
 
     @Test
     void validUser_Ok() {
