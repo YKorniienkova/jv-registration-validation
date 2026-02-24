@@ -12,11 +12,11 @@ public class RegistrationServiceImpl implements RegistrationService {
         if (user == null) {
             throw new RegistrationException("User cant be null");
         }
-        if (storageDao.get(user.getLogin()) != null) {
-            throw new RegistrationException("User already exists");
-        }
         if (user.getLogin() == null || user.getLogin().length() < 6) {
             throw new RegistrationException("Too short login");
+        }
+        if (storageDao.get(user.getLogin()) != null) {
+            throw new RegistrationException("User already exists");
         }
         if (user.getPassword() == null || user.getPassword().length() < 6) {
             throw new RegistrationException("Too short password");
