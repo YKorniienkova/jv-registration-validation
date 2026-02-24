@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class RegistrationServiceImplTest {
-    private RegistrationService registrationService;
 
     private static final String VALID_LOGIN = "validLogin";
     private static final String VALID_PASSWORD = "validPassword";
@@ -18,6 +17,8 @@ class RegistrationServiceImplTest {
     private static final String SHORT_LOGIN = "abc";
     private static final String SHORT_PASSWORD = "123";
     private static final int UNDERAGE = 17;
+
+    private RegistrationService registrationService;
 
     @BeforeEach
     void setUp() {
